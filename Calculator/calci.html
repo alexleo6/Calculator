@@ -1,0 +1,92 @@
+<html>
+<script>
+function fun()
+{
+var r=document.f1.t1.value;
+var temp1=eval(r);
+document.f1.t1.value=temp1;
+}
+</script>
+<body>
+<form name="f1">
+<center>
+<table border=1 cellpadding=10>
+<tr>
+<th colspan=4>
+<u>
+Calculator
+</u>
+</th>
+</tr>
+<tr>
+<td colspan=4>
+<input type="text" name="t1">
+</td>
+</tr>
+<tr>
+<td><input type="button" onclick="f1.t1.value+='1'" value="1" class="b"></td>
+<td><input type="button" onclick="f1.t1.value+='2'" value="2" class="b"></td>
+<td><input type="button" onclick="f1.t1.value+='3'" value="3" class="b"></td>
+<td><input type="button" onclick="f1.t1.value+='4'" value="4" class="b"></td>
+</tr>
+<tr>
+<td><input type="button" onclick="f1.t1.value+='5'" value="5" class="b"></td>
+<td><input type="button" onclick="f1.t1.value+='6'" value="6" class="b"></td>
+<td><input type="button" onclick="f1.t1.value+='7'" value="7" class="b"></td>
+<td><input type="button" onclick="f1.t1.value+='8'" value="8" class="b"></td>
+</tr>
+<tr>
+<td><input type="button" onclick="f1.t1.value+='9'" value="9" class="b"></td>
+<td><input type="button" onclick="f1.t1.value+='0'" value="0" class="b"></td>
+<td><input type="button" onclick="fun()" value="=" class="b"></td>
+<td><input type="button" onclick="f1.t1.value=''" value="C" class="b"></td>
+</tr>
+<tr>
+<td><input type="button" onclick="f1.t1.value+='+'" value="+" class="b"></td>
+<td><input type="button" onclick="f1.t1.value+='-'" value="-" class="b"></td>
+<td><input type="button" onclick="f1.t1.value+='*'" value="*" class="b"></td>
+<td><input type="button" onclick="f1.t1.value+='/'" value="/" class="b"></td>
+</tr>
+</table>
+</center>
+</form>
+</body>
+</html>
+<style>
+body
+{
+background-image:url("vote10.jpg");
+background-repeat:no-repeat;
+background-size:100%;
+text-align:center;
+margin-top:150;
+border:100px;
+padding:20;
+}
+th
+{
+color:cyan;
+font-size:30;
+}
+.b
+{
+font-size:20;
+cursor:pointer;
+color:cyan;
+background-color:black;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
