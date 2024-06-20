@@ -69,6 +69,7 @@
         <input type="text" class="display" id="display" value="0" disabled>
         <div class="buttons">
             <button class="button" onclick="clearDisplay()">C</button>
+            <button class="button" onclick="backspace()">⌫</button>
             <button class="button" onclick="appendToDisplay('7')">7</button>
             <button class="button" onclick="appendToDisplay('8')">8</button>
             <button class="button" onclick="appendToDisplay('9')">9</button>
@@ -108,6 +109,14 @@
                 display.value = eval(display.value);
             } catch (e) {
                 display.value = 'Error';
+            }
+        }
+
+        function backspace() {
+            const display = document.getElementById('display');
+            display.value = display.value.slice(0, -1);
+            if (display.value === '') {
+                display.value = '0';
             }
         }
     </script>
