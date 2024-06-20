@@ -10,55 +10,63 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
         }
         .calculator {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         .display {
             width: 100%;
-            height: 50px;
-            background-color: #222;
+            height: 60px;
+            background: rgba(0, 0, 0, 0.7);
             color: #fff;
             text-align: right;
-            padding: 10px;
-            font-size: 24px;
-            border-radius: 5px;
-            margin-bottom: 10px;
+            padding: 10px 20px;
+            font-size: 32px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: none;
+            outline: none;
         }
         .buttons {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
+            gap: 15px;
         }
         .button {
-            padding: 20px;
-            font-size: 18px;
+            padding: 25px;
+            font-size: 24px;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
-            background-color: #f9f9f9;
-            transition: background-color 0.3s;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: background 0.3s, transform 0.2s;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         .button:hover {
-            background-color: #e0e0e0;
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
         }
         .button.operator {
-            background-color: #ff9500;
-            color: #fff;
+            background: rgba(255, 149, 0, 0.8);
         }
         .button.operator:hover {
-            background-color: #e08900;
+            background: rgba(255, 149, 0, 0.9);
         }
     </style>
 </head>
 <body>
     <div class="calculator">
-        <div class="display" id="display">0</div>
+        <input type="text" class="display" id="display" value="0" disabled>
         <div class="buttons">
             <button class="button" onclick="clearDisplay()">C</button>
             <button class="button" onclick="appendToDisplay('7')">7</button>
@@ -82,24 +90,24 @@
 
     <script>
         function clearDisplay() {
-            document.getElementById('display').innerText = '0';
+            document.getElementById('display').value = '0';
         }
 
         function appendToDisplay(value) {
             const display = document.getElementById('display');
-            if (display.innerText === '0') {
-                display.innerText = value;
+            if (display.value === '0') {
+                display.value = value;
             } else {
-                display.innerText += value;
+                display.value += value;
             }
         }
 
         function calculateResult() {
             const display = document.getElementById('display');
             try {
-                display.innerText = eval(display.innerText);
+                display.value = eval(display.value);
             } catch (e) {
-                display.innerText = 'Error';
+                display.value = 'Error';
             }
         }
     </script>
