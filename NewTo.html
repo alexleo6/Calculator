@@ -10,23 +10,22 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(135deg, #000000, #434343);
             font-family: 'Arial', sans-serif;
             margin: 0;
         }
         .calculator {
-            background: rgba(255, 255, 255, 0.1);
+            background: linear-gradient(145deg, #1e2024, #23272b);
             padding: 30px;
             border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 10px 10px 15px #1a1c1f, -10px -10px 15px #282c31;
+            border: 1px solid #333;
         }
         .display {
             width: 100%;
             height: 60px;
-            background: rgba(0, 0, 0, 0.7);
-            color: #fff;
+            background: #1e2024;
+            color: #00ff95;
             text-align: right;
             padding: 10px 20px;
             font-size: 32px;
@@ -34,6 +33,7 @@
             margin-bottom: 20px;
             border: none;
             outline: none;
+            box-shadow: inset 5px 5px 10px #1a1c1f, inset -5px -5px 10px #282c31;
         }
         .buttons {
             display: grid;
@@ -46,21 +46,21 @@
             border: none;
             border-radius: 10px;
             cursor: pointer;
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
+            background: linear-gradient(145deg, #23272b, #1e2024);
+            color: #00ff95;
             transition: background 0.3s, transform 0.2s;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 5px 5px 10px #1a1c1f, -5px -5px 10px #282c31;
         }
         .button:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: linear-gradient(145deg, #1e2024, #23272b);
             transform: scale(1.05);
         }
         .button.operator {
-            background: rgba(255, 149, 0, 0.8);
+            background: linear-gradient(145deg, #ff9500, #e08900);
+            color: #fff;
         }
         .button.operator:hover {
-            background: rgba(255, 149, 0, 0.9);
+            background: linear-gradient(145deg, #e08900, #ff9500);
         }
     </style>
 </head>
